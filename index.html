@@ -1,393 +1,352 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clementino Cunha — Proposta de Rebranding</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@200;300;400;500&family=DM+Sans:wght@200;300;400;500&family=Inter:wght@200;300;400&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --p484:#9A3324;--p484-deep:#6B1F14;--p484-mid:#B84535;
-  --p484-warm:#C96A58;--p484-blush:#EECDC7;--p484-frost:#F8EDEB;
-  --ink:#1C1614;--charcoal:#3A3230;--wg:#7C6F6A;
-  --linen:#EDE6DE;--paper:#F5F0EA;--cream:#FBF8F3;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden}
-@media print{.noprint{display:none!important}.pb{page-break-before:always}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conceito II — Proximidade Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --brasa:#6B1F14;
+      --pantone:#9A3122;
+      --coral:#C96A58;
+      --cobre:#A0714A;
+      --blush:#EECDC7;
+      --papel:#F5F0EA;
+      --tinta:#292D29;
+      --cream:#FBF8F3;
+      --line:#E5DDD3;
+    }
 
-/* NAV DOTS */
-.snav{position:fixed;right:28px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:200}
-.snav a{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--wg);cursor:pointer;transition:all .3s;display:block}
-.snav a.on,.snav a:hover{background:var(--p484);border-color:var(--p484);transform:scale(1.4)}
+    body{
+      background:var(--cream);
+      color:var(--tinta);
+      font-family:'Inter',sans-serif;
+      line-height:1.7;
+    }
 
-/* UTIL */
-.wrap{max-width:1300px;margin:0 auto;padding:80px}
-.lbl{font-size:9px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--p484);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.lbl::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--p484);flex-shrink:0}
-.lbl-lt{color:rgba(251,248,243,.35)} .lbl-lt::before{background:rgba(251,248,243,.3)}
-.h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,44px);font-weight:300;color:var(--ink);line-height:1.12;margin-bottom:48px}
-.h2 em{font-style:italic;color:var(--p484)}
-.h2-lt{color:rgba(251,248,243,.85)}
-.p{font-size:14px;font-weight:300;line-height:1.95;color:var(--charcoal);margin-bottom:16px}
-.p strong{color:var(--ink);font-weight:500}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
-.reveal.visible{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .container{max-width:1140px;margin:0 auto;padding:64px 32px}
 
-/* CAPA */
-.capa{min-height:100vh;background:var(--ink);display:grid;grid-template-rows:1fr auto;position:relative;overflow:hidden}
-.capa::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(154,51,36,.025) 80px,rgba(154,51,36,.025) 81px),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(154,51,36,.025) 80px,rgba(154,51,36,.025) 81px)}
-.capa-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px;position:relative;z-index:1}
-.capa-bar{height:4px;display:flex}
+    .hero{
+      min-height:70vh;
+      display:flex;
+      align-items:flex-end;
+      background:linear-gradient(140deg,var(--tinta),#1f2420 65%,var(--brasa));
+      color:var(--papel);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:480px;height:480px;
+      border-radius:50%;
+      background:radial-gradient(circle,var(--coral),transparent 70%);
+      opacity:.2;
+      right:-120px;top:-120px;
+    }
 
-/* ÍNDICE */
-.ic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.ic{padding:36px 32px;display:flex;flex-direction:column;gap:14px;cursor:pointer;transition:background .3s;text-decoration:none;position:relative;overflow:hidden}
-.ic::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--p484);transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.ic:hover{background:var(--paper)} .ic:hover::before{transform:scaleX(1)}
-.ic-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--linen);line-height:1;transition:color .3s}
-.ic:hover .ic-num{color:var(--p484-blush)}
-.ic-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--ink)}
-.ic-desc{font-size:12px;font-weight:300;color:var(--wg);line-height:1.6}
-.ic-arr{font-size:16px;color:var(--p484);opacity:0;margin-top:auto;transition:opacity .3s,transform .3s}
-.ic:hover .ic-arr{opacity:1;transform:translateX(4px)}
+    .eyebrow{
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-size:11px;
+      color:var(--coral);
+      margin-bottom:14px;
+    }
 
-/* DIVISOR */
-.sd{background:var(--ink);padding:56px 80px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
-.sd::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(154,51,36,.03) 60px,rgba(154,51,36,.03) 61px)}
-.sd-n{font-family:'Cormorant Garamond',serif;font-size:130px;font-weight:300;color:rgba(251,248,243,.03);line-height:1;position:absolute;top:50%;left:60px;transform:translateY(-50%);user-select:none}
-.sd-left{position:relative;z-index:1;padding-left:150px}
-.sd-lbl{font-size:9px;font-weight:400;letter-spacing:5px;text-transform:uppercase;color:rgba(251,248,243,.3);margin-bottom:8px}
-.sd-ttl{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,42px);font-weight:300;color:rgba(251,248,243,.85);line-height:1.1}
-.sd-ttl em{font-style:italic;color:var(--p484)}
-.sd-bar{width:3px;height:60px;background:var(--p484);border-radius:2px;position:relative;z-index:1}
+    h1,h2,h3{font-family:'Lora',serif;font-weight:500;line-height:1.2}
+    h1{font-size:clamp(2rem,4vw,3.4rem);max-width:18ch;margin-bottom:14px}
+    .lead{max-width:62ch;color:rgba(245,240,234,.82)}
 
-/* CONCEITO 2 COL */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:72px}
-.kw{display:flex;flex-direction:column}
-.kw-r{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--linen)}
-.kw-dot{width:7px;height:7px;border-radius:50%;background:var(--p484);flex-shrink:0;opacity:.5}
-.kw-w{font-size:16px;font-weight:300;color:var(--ink);flex:1}
-.kw-d{font-size:11px;font-weight:300;color:var(--wg);width:160px;text-align:right;line-height:1.4}
+    section{border-top:1px solid var(--line)}
+    .section-title{margin-bottom:20px}
+    .section-title h2{font-size:clamp(1.7rem,2.8vw,2.5rem);margin-bottom:8px}
+    .section-title p{max-width:70ch;color:#4c504c}
 
-/* PALETA */
-.pal{display:flex;gap:2px;border-radius:12px;overflow:hidden;height:96px;margin-bottom:16px}
-.sw{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;transition:flex .35s}
-.sw:hover{flex:2.2}
-.sw-n{font-size:11px;font-weight:400;margin-bottom:2px}
-.sw-h{font-size:9px;font-weight:300;letter-spacing:1px;opacity:.55}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 
-/* TIPO */
-.tipo{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:12px;overflow:hidden;margin-bottom:64px}
-.tc{padding:40px 36px}
-.tc-lbl{font-size:9px;font-weight:400;letter-spacing:4px;text-transform:uppercase;color:var(--wg);margin-bottom:24px}
-.tc-lbl-lt{color:rgba(251,248,243,.3)}
+    .card{
+      background:var(--papel);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:26px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height:170px;
+    }
+    .card h3{font-size:1.25rem}
+    .card p{font-size:.96rem;color:#464a46}
+    .card .caps{
+      margin-top:auto;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      font-size:.75rem;
+      color:var(--pantone);
+      font-weight:500;
+    }
 
-/* LOGOS */
-.logo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px}
-.lc{border-radius:16px;padding:40px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;position:relative}
-.lc-lbl{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:8px;font-weight:400;letter-spacing:3px;text-transform:uppercase;opacity:.3}
+    .dark-card{background:var(--pantone);border-color:#8e2f22;color:var(--papel)}
+    .dark-card p{color:rgba(245,240,234,.88)}
+    .dark-card .caps{color:rgba(245,240,234,.92)}
 
-/* ELEMENTOS */
-.elem-bg{padding:72px 80px}
-.elem-bg-paper{background:var(--paper)}
-.elem-bg-dk{background:var(--ink)}
-.elem-inner{max-width:1300px;margin:0 auto}
-.elem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
-.eg{border-radius:12px;padding:32px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:180px}
-.eg-lbl{font-size:8px;font-weight:500;letter-spacing:3px;text-transform:uppercase;text-align:center;opacity:.45}
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{padding:10px 16px;border-radius:999px;background:var(--papel);border:1px solid var(--line);font-size:.86rem}
 
-/* MOCKUPS */
-.mk-bg{padding:72px 80px}
-.mk-bg-lt{background:var(--paper)}
-.mk-bg-dk{background:var(--ink)}
-.mk-inner{max-width:1300px;margin:0 auto}
-.mk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-.mk-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+    .swatches{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:16px}
+    .swatch{border-radius:14px;padding:16px;min-height:96px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);font-size:.78rem}
+    .swatch strong{font-size:.85rem}
 
-/* LINEN TEXTURE */
-.tex-linen{background-color:#E8E0D5;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(154,51,36,.05) 2px,rgba(154,51,36,.05) 3px),repeating-linear-gradient(90deg,transparent,transparent 5px,rgba(154,51,36,.02) 5px,rgba(154,51,36,.02) 6px)}
-.tex-paper{background-color:#F0EAE0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E")}
-.tex-weave{background-color:#EDE6DE;background-image:repeating-linear-gradient(45deg,rgba(154,51,36,.04) 0,rgba(154,51,36,.04) 1px,transparent 0,transparent 50%),repeating-linear-gradient(-45deg,rgba(154,51,36,.04) 0,rgba(154,51,36,.04) 1px,transparent 0,transparent 50%);background-size:6px 6px}
-.tex-grain{background-color:#FBF8F3;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    figure{border:1px solid var(--line);border-radius:16px;background:var(--papel);padding:10px}
+    figure img{width:100%;height:190px;object-fit:cover;border-radius:10px;display:block}
+    figcaption{font-size:.78rem;color:#5a5f5a;margin-top:8px}
 
-/* COMPARATIVO */
-.comp-bg{background:var(--ink);padding:100px 80px;position:relative;overflow:hidden}
-.comp-bg::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(154,51,36,.025) 80px,rgba(154,51,36,.025) 81px)}
-.comp-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1}
-.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
-.cc-card{padding:40px 36px;background:rgba(251,248,243,.03);border:1px solid rgba(251,248,243,.06);display:flex;flex-direction:column;gap:20px}
-.cc-card.hi{background:rgba(154,51,36,.07);border-color:rgba(154,51,36,.25)}
-.cc-row{display:flex;flex-direction:column;gap:10px}
-.cc-item{display:flex;gap:12px;align-items:flex-start}
-.cc-il{font-size:9px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:rgba(251,248,243,.25);flex-shrink:0;width:80px;padding-top:2px}
-.cc-iv{font-size:13px;font-weight:300;color:rgba(251,248,243,.55);line-height:1.6}
-.cc-v{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:8px;background:rgba(154,51,36,.08);border:1px solid rgba(154,51,36,.15)}
-.cc-vd{width:5px;height:5px;border-radius:50%;background:var(--p484);flex-shrink:0;margin-top:5px}
-.cc-vt{font-size:12px;font-weight:300;color:rgba(251,248,243,.55);line-height:1.5}
-.rdot{width:8px;height:8px;border-radius:50%}
-.rdot.on{background:var(--p484)} .rdot.off{background:rgba(251,248,243,.1);border:1px solid rgba(251,248,243,.15)}
+    .closing{background:var(--tinta);color:var(--papel)}
+    .closing .chip{background:rgba(245,240,234,.08);border-color:rgba(245,240,234,.22);color:var(--papel)}
 
-footer{padding:48px 80px 36px;border-top:3px solid var(--p484);background:var(--ink)}
-.foot-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-.foot-copy{font-size:11px;font-weight:300;color:rgba(251,248,243,.2)}
-
-@media(max-width:900px){
-  .capa-grid,.two,.tipo,.logo-row,.mk-grid,.mk-grid-2,.comp-grid,.ic-grid,.elem-grid{grid-template-columns:1fr}
-  .wrap,.elem-bg,.mk-bg,.comp-bg,footer{padding:60px 24px}
-  .sd{padding:40px 24px} .sd-left{padding-left:20px} .sd-n{display:none}
-  .snav{display:none}
-  .pal{flex-wrap:wrap;height:auto} .sw{min-height:64px;flex:1 1 28%}
-}
-</style>
+    @media (max-width:1000px){
+      .grid-3,.grid-4,.gallery,.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:700px){
+      .container{padding:44px 20px}
+      .grid-2,.grid-3,.grid-4,.gallery,.swatches{grid-template-columns:1fr}
+      figure img{height:220px}
+    }
+  </style>
 </head>
 <body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Direção Visual Selecionada · Conceito II</p>
+      <h1>Proximidade Premium</h1>
+      <p class="lead">O conceito que combina sofisticação com calor humano — a diferença real face aos grandes escritórios de Lisboa e Porto.</p>
+    </div>
+  </header>
 
-<nav class="snav noprint" id="snav">
-  <a class="on" data-s="capa"></a>
-  <a data-s="indice"></a>
-  <a data-s="c1"></a>
-  <a data-s="c2"></a>
-  <a data-s="c3"></a>
-  <a data-s="comp"></a>
-</nav>
-
-<section class="capa" id="capa">
-  <div class="wrap capa-grid">
-    <div>
-      <div style="font-size:9px;font-weight:400;letter-spacing:5px;text-transform:uppercase;color:rgba(251,248,243,.3);margin-bottom:32px;display:flex;align-items:center;gap:12px;animation:fadeUp .8s ease .2s both">
-        <span style="width:20px;height:1px;background:#9A3324;display:block;flex-shrink:0"></span>Direção Visual Selecionada · Conceito II
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">01 — O Conceito</p>
+        <h2>Tão bom quanto os maiores — mas muito mais próximo.</h2>
       </div>
-      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,4.5vw,64px);font-weight:300;color:rgba(251,248,243,.9);line-height:1.1;margin-bottom:20px;animation:fadeUp 1s ease .4s both">
-        Proximidade <em style="font-style:italic;color:#9A3324">Premium.</em>
-      </h1>
-      <p style="font-size:14px;font-weight:300;line-height:1.9;color:rgba(251,248,243,.45);max-width:520px;animation:fadeUp .9s ease .6s both">
-        O conceito que combina sofisticação com calor humano — a diferença real face aos grandes escritórios de Lisboa e Porto.
-      </p>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:28px;animation:fadeUp 1s ease .7s both">
-      <div style="position:relative;display:flex;align-items:center;justify-content:center;width:180px;height:180px">
-        <div style="position:absolute;inset:-18px;border-radius:50%;border:1px solid rgba(154,51,36,.18)"></div>
-        <div style="position:absolute;inset:-38px;border-radius:50%;border:.5px solid rgba(154,51,36,.08)"></div>
-        <img src="assets/simbolo-aprovado.png" alt="CC" style="width:160px;height:160px;object-fit:contain;opacity:.82;position:relative;z-index:1">
+
+      <div class="grid-2" style="margin-bottom:20px">
+        <article class="card">
+          <h3>Título principal</h3>
+          <p>O Caminho II eleva a proximidade genuína a posicionamento visual.</p>
+          <p>Formas circulares, pills e composições em arco substituem ângulos retos, criando uma identidade sofisticada mas acolhedora.</p>
+          <p>O Pantone 484 C expande-se em espectro quente: coral, cobre e blush.</p>
+          <p class="caps">POSICIONAMENTO · FORMA · TEMPERATURA</p>
+        </article>
+        <article class="card">
+          <h3>Palavras-chave</h3>
+          <p><strong>Proximidade</strong> — O diferencial exclusivo</p>
+          <p><strong>Sofisticação</strong> — Competência premium visível</p>
+          <p><strong>Calor</strong> — Temperatura emocional na paleta</p>
+          <p><strong>Orgânico</strong> — Círculos e curvas, nunca arestas</p>
+          <p class="caps">ESSENCIA · DIFERENCIAL · IDENTIDADE</p>
+        </article>
       </div>
-      <div style="text-align:right;font-size:9px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:rgba(251,248,243,.25);line-height:2.2">
-        Conceito II · Selecionado<br>
-        Fafe · Rio Vizela
-      </div>
-    </div>
-  </div>
-  <div class="capa-bar">
-    <div style="flex:1;background:#6B1F14"></div>
-    <div style="flex:1;background:#9A3122"></div>
-    <div style="flex:1;background:#C96A58"></div>
-  </div>
-</section>
 
-<section id="indice">
-  <div class="wrap" style="padding-bottom:40px">
-    <div class="lbl reveal">Índice</div>
-    <h2 class="h2 reveal">Apresentação completa do <em>Conceito II</em></h2>
-    <div class="ic-grid">
-      <a class="ic reveal d1" href="#c1"><div class="ic-num">01</div><div class="ic-name">Conceito, Paleta e Tipografia</div><div class="ic-desc">Base estratégica e sistema visual do Proximidade Premium.</div><div class="ic-arr">→</div></a>
-      <a class="ic reveal d2" href="#c2"><div class="ic-num">02</div><div class="ic-name">Logotipo, Elementos e Fundos</div><div class="ic-desc">Construção formal, símbolos locais e profundidade visual.</div><div class="ic-arr">→</div></a>
-      <a class="ic reveal d3" href="#c3"><div class="ic-num">03</div><div class="ic-name">Fotografia, Usos e Galeria</div><div class="ic-desc">Direção fotográfica, aplicações práticas e exemplos reais.</div><div class="ic-arr">→</div></a>
-    </div>
-  </div>
-</section>
-
-<div class="sd pb" id="c1"><div class="sd-n">01</div><div class="sd-left"><div class="sd-lbl">01 — O Conceito</div><div class="sd-ttl">Tão bom quanto os maiores — mas <em>muito mais próximo.</em></div></div><div class="sd-bar"></div></div>
-
-<div class="wrap">
-  <div class="two reveal" style="gap:36px;margin-bottom:56px">
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)">
-      <div class="tc-lbl">Conceito II — Proximidade Premium</div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:14px">Tão bom quanto os maiores — mas muito mais próximo.</h3>
-      <p class="p" style="margin-bottom:10px">O Caminho II eleva a proximidade genuína a posicionamento visual. Formas circulares, pills e composições em arco substituem os ângulos retos, criando uma identidade sofisticada mas acolhedora.</p>
-      <p class="p" style="margin-bottom:0">O Pantone 484 C expande-se em espectro quente: coral, cobre e blush.</p>
-      <div class="tc-lbl" style="margin-top:10px">POSICIONAMENTO · FORMA · TEMPERATURA</div>
-    </div>
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)">
-      <div class="tc-lbl">Palavras-chave</div>
-      <div class="kw" style="gap:0">
-        <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Proximidade</div><div class="kw-d">O diferencial exclusivo</div></div>
-        <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Sofisticação</div><div class="kw-d">Competência premium visível</div></div>
-        <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Calor</div><div class="kw-d">Temperatura emocional na paleta</div></div>
-        <div class="kw-r" style="border:none"><div class="kw-dot"></div><div class="kw-w">Orgânico</div><div class="kw-d">Círculos e curvas, nunca arestas</div></div>
+      <p class="eyebrow" style="margin-top:32px">Os Três Pilares</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Sofisticacao</h3>
+          <p>Competência técnica e visual de nível premium transmitida em cada ponto de contacto com o cliente.</p>
+          <p class="caps">EXCELENCIA · CONFIANCA · PRECISAO</p>
+        </article>
+        <article class="card">
+          <h3>Proximidade</h3>
+          <p>Calor humano genuíno como identidade.</p>
+          <p class="caps">RELACAO · ACESSIBILIDADE · CONFIANCA</p>
+        </article>
+        <article class="card">
+          <h3>Coerencia</h3>
+          <p>Sistema visual consistente que cresce com o escritório.</p>
+          <p class="caps">SISTEMA · CONSISTENCIA · ESCALA</p>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="lbl reveal">Os Três Pilares</div>
-  <div class="tipo reveal" style="margin-bottom:52px">
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)">
-      <div class="tc-lbl">Sofisticacao</div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:24px;font-weight:400;color:var(--ink);margin-bottom:10px">Excelência de nível premium</h3>
-      <p class="p" style="margin-bottom:14px">Competência técnica e visual de nível premium transmitida em cada ponto de contacto com o cliente.</p>
-      <div class="tc-lbl">EXCELENCIA · CONFIANCA · PRECISAO</div>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">02 — Paleta de Cores</p>
+        <h2>Sistema cromático completo.</h2>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch" style="background:#6B1F14;color:#F5F0EA"><strong>Brasa</strong><span>#6B1F14</span></div>
+        <div class="swatch" style="background:#9A3122;color:#F5F0EA"><strong>Pantone 484 C</strong><span>#9A3122</span></div>
+        <div class="swatch" style="background:#C96A58;color:#F5F0EA"><strong>Coral</strong><span>#C96A58</span></div>
+        <div class="swatch" style="background:#A0714A;color:#F5F0EA"><strong>Cobre</strong><span>#A0714A</span></div>
+        <div class="swatch" style="background:#EECDC7;color:#292D29"><strong>Blush</strong><span>#EECDC7</span></div>
+        <div class="swatch" style="background:#F5F0EA;color:#292D29"><strong>Papel</strong><span>#F5F0EA</span></div>
+        <div class="swatch" style="background:#292D29;color:#F5F0EA"><strong>Tinta</strong><span>#292D29</span></div>
+      </div>
+
+      <article class="card" style="margin-top:20px">
+        <h3>Tinta #292D29</h3>
+        <p>Tinta #292D29 é usada no texto do logotipo e em detalhes de precisão.</p>
+        <p class="caps">FILETES · NUMERACAO · LEGENDAS</p>
+      </article>
     </div>
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)">
-      <div class="tc-lbl">Proximidade</div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:24px;font-weight:400;color:var(--ink);margin-bottom:10px">Calor humano genuíno</h3>
-      <p class="p" style="margin-bottom:14px">Calor humano genuíno como identidade. A diferença real face aos grandes escritórios.</p>
-      <div class="tc-lbl">RELACAO · ACESSIBILIDADE · CONFIANCA</div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">03 — Tipografia</p>
+      </div>
+      <div class="grid-2">
+        <article class="card dark-card">
+          <h3>Lora — Tipografia primaria</h3>
+          <p>Elegância editorial e calor humano nos títulos.</p>
+          <p class="caps">TITULOS · CITACOES · HIERARQUIA</p>
+        </article>
+        <article class="card">
+          <h3>Inter — Tipografia secundaria</h3>
+          <p>Alta legibilidade em interfaces e texto corrido.</p>
+          <p class="caps">TEXTO · INTERFACE · LEGENDAS</p>
+        </article>
+      </div>
     </div>
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)">
-      <div class="tc-lbl">Coerencia</div>
-      <h3 style="font-family:'DM Serif Display',serif;font-size:24px;font-weight:400;color:var(--ink);margin-bottom:10px">Sistema que cresce com consistência</h3>
-      <p class="p" style="margin-bottom:14px">Um sistema visual consistente que cresce com o escritório e funciona em todos os suportes.</p>
-      <div class="tc-lbl">SISTEMA · CONSISTENCIA · ESCALA</div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">04 — Elementos Graficos</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Circulos</h3>
+          <p>Formas que representam ligação e continuidade.</p>
+          <p class="caps">COMPOSICAO · IDENTIDADE · RITMO</p>
+        </article>
+        <article class="card">
+          <h3>Pills</h3>
+          <p>Formas arredondadas que trazem suavidade visual.</p>
+          <p class="caps">CTA · LABELS · AREAS</p>
+        </article>
+        <article class="card">
+          <h3>Simbolo CC</h3>
+          <p>Uso do símbolo como selo visual.</p>
+          <p class="caps">IDENTIDADE · MARCA · ASSINATURA</p>
+        </article>
+      </div>
+
+      <p class="eyebrow" style="margin-top:32px">Simbolos Locais — Fafe</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Arco da Ponte do Barroco</h3>
+          <p>Arco medieval sobre o rio Vizela que inspira estruturas gráficas em arco.</p>
+          <p class="caps">LIGACAO · PERMANENCIA · CONFIANCA</p>
+        </article>
+        <article class="card">
+          <h3>Rio Vizela</h3>
+          <p>Linha orgânica que inspira curvas do sistema gráfico.</p>
+          <p class="caps">MOVIMENTO · CONTINUIDADE · ORIGEM</p>
+        </article>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="lbl reveal">02 — Paleta de Cores</div>
-  <div class="tc reveal" style="background:#FAF8F4;border:1px solid var(--linen);margin-bottom:22px">
-    <div class="tc-lbl">Sistema cromático completo</div>
-    <div class="pal" style="margin-bottom:14px">
-      <div class="sw" style="background:#6B1F14;color:#FBF8F4"><div class="sw-n">Brasa</div><div class="sw-h">#6B1F14</div></div>
-      <div class="sw" style="background:#9A3122;color:#FBF8F4"><div class="sw-n">Pantone 484 C</div><div class="sw-h">#9A3122</div></div>
-      <div class="sw" style="background:#C96A58;color:#FBF8F4"><div class="sw-n">Coral</div><div class="sw-h">#C96A58</div></div>
-      <div class="sw" style="background:#A0714A;color:#FBF8F4"><div class="sw-n">Cobre</div><div class="sw-h">#A0714A</div></div>
-      <div class="sw" style="background:#EECDC7;color:#1C1614"><div class="sw-n">Blush</div><div class="sw-h">#EECDC7</div></div>
-      <div class="sw" style="background:#F5F0EA;color:#1C1614;border:1px solid #EDE6DE"><div class="sw-n">Papel</div><div class="sw-h">#F5F0EA</div></div>
-      <div class="sw" style="background:#292D29;color:#FBF8F4"><div class="sw-n">Tinta</div><div class="sw-h">#292D29</div></div>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">07 — Texturas e Fundos</p>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <h3>Fundo liso quente</h3>
+          <p>Blush e Papel como fundos principais.</p>
+          <p class="caps">POSTS · CARTAS · FUNDOS</p>
+        </article>
+        <article class="card">
+          <h3>Circulo de fundo</h3>
+          <p>Circulo terracota em baixa opacidade usado como elemento de composição.</p>
+          <p class="caps">CAPAS · SLIDES · POSTS</p>
+        </article>
+        <article class="card">
+          <h3>Sobreposicao coral</h3>
+          <p>Camada coral ou cobre sobre fundo escuro.</p>
+          <p class="caps">CARTAO · CAPA DE DOCUMENTO</p>
+        </article>
+        <article class="card dark-card" style="background:linear-gradient(145deg,#6B1F14,#9A3122)">
+          <h3>Gradiente terracota</h3>
+          <p>Gradiente entre Brasa e Pantone 484 C.</p>
+          <p class="caps">HEADERS · BANNERS · CAPAS</p>
+        </article>
+      </div>
     </div>
-    <h4 style="font-family:'DM Serif Display',serif;font-size:19px;font-weight:400;color:var(--ink);margin-bottom:8px">Tinta #292D29</h4>
-    <p class="p" style="margin-bottom:10px">Cor usada no texto do logotipo e em detalhes de precisão.</p>
-    <div class="tc-lbl">FILETES · NUMERACAO · LEGENDAS</div>
-  </div>
+  </section>
 
-  <div class="lbl reveal" style="margin-top:52px">03 — Tipografia</div>
-  <div class="tipo reveal">
-    <div class="tc" style="background:#6B1F14">
-      <div class="tc-lbl tc-lbl-lt">Lora — Tipografia Primaria</div>
-      <div style="font-family:'Lora',serif;font-size:72px;color:rgba(253,250,247,.9);line-height:.9;margin-bottom:20px">Ll<br><em style="color:#C96A58">Aa</em></div>
-      <p style="font-size:13px;font-weight:300;color:rgba(253,250,247,.75);line-height:1.8;margin-bottom:10px">A Lora transmite elegância editorial e calor humano nos títulos.</p>
-      <div class="tc-lbl tc-lbl-lt">TITULOS · CITACOES · HIERARQUIA</div>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">08 — Direcao Fotografica</p>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <h3>Tom quente</h3>
+          <p>Evitar imagens frias.</p>
+          <p class="caps">TRATAMENTO · COR · LUZ</p>
+        </article>
+        <article class="card">
+          <h3>Pessoas reais</h3>
+          <p>Contextos genuínos de interação.</p>
+          <p class="caps">EQUIPE · CLIENTES · MOMENTOS</p>
+        </article>
+        <article class="card">
+          <h3>Grain leve</h3>
+          <p>Textura analógica suave.</p>
+          <p class="caps">PROXIMIDADE · MATERIALIDADE</p>
+        </article>
+        <article class="card">
+          <h3>Mascara circular</h3>
+          <p>Retratos enquadrados em circulo.</p>
+          <p class="caps">AVATAR · PERFIL · EQUIPE</p>
+        </article>
+      </div>
     </div>
-    <div class="tc" style="background:var(--paper)">
-      <div class="tc-lbl">Inter — Tipografia Secundaria</div>
-      <div style="font-family:'Inter',sans-serif;font-size:52px;font-weight:200;color:var(--ink);line-height:1;letter-spacing:-2px;margin-bottom:20px">Cc Aa</div>
-      <p style="font-size:13px;font-weight:300;color:var(--charcoal);line-height:1.9;margin-bottom:10px">Tipografia neutra e altamente legível para texto corrido e interfaces digitais.</p>
-      <div class="tc-lbl">TEXTO · INTERFACE · LEGENDAS</div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">09 — Exemplos de Uso</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/cartao.jpg" alt="cartao" /><figcaption>assets/cartao.jpg</figcaption></figure>
+        <figure><img src="assets/caneca.jpg" alt="caneca" /><figcaption>assets/caneca.jpg</figcaption></figure>
+        <figure><img src="assets/caneta.jpg" alt="caneta" /><figcaption>assets/caneta.jpg</figcaption></figure>
+        <figure><img src="assets/papel1.jpg" alt="papel1" /><figcaption>assets/papel1.jpg</figcaption></figure>
+        <figure><img src="assets/papel2.jpg" alt="papel2" /><figcaption>assets/papel2.jpg</figcaption></figure>
+        <figure><img src="assets/post1.jpg" alt="post1" /><figcaption>assets/post1.jpg</figcaption></figure>
+        <figure><img src="assets/post2.jpg" alt="post2" /><figcaption>assets/post2.jpg</figcaption></figure>
+        <figure><img src="assets/post3.jpg" alt="post3" /><figcaption>assets/post3.jpg</figcaption></figure>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="sd pb" id="c2"><div class="sd-n">02</div><div class="sd-left"><div class="sd-lbl">04–07 — Sistema Visual</div><div class="sd-ttl">Logotipo, elementos, símbolos locais e <em>fundos.</em></div></div><div class="sd-bar"></div></div>
-
-<div class="wrap">
-  <div class="lbl reveal">04 — Logotipo</div>
-  <h2 class="h2 reveal">Variações do <em>logotipo</em></h2>
-  <div class="logo-row reveal" style="margin-bottom:52px">
-    <div class="lc" style="background:#181412"><img src="assets/Logo-1-branco.png" alt="Versão original" style="width:68px;height:68px;object-fit:contain;opacity:.75;margin-bottom:16px"><div class="lc-lbl" style="color:rgba(250,248,244,.2)">Versão original</div></div>
-    <div class="lc" style="background:#F5F0EA;border:1.5px solid var(--linen)"><img src="assets/logo-aprovado.png" alt="Fundo branco" style="width:100%;max-width:220px;object-fit:contain;opacity:.8"><div class="lc-lbl" style="color:var(--wg)">Fundo branco</div></div>
-    <div class="lc" style="background:#9A3122"><img src="assets/simbolo-aprovado.png" alt="Símbolo isolado" style="width:68px;height:68px;object-fit:contain;opacity:.85;margin-bottom:16px"><div class="lc-lbl" style="color:rgba(250,248,244,.2)">Símbolo isolado · Fundo terracota</div></div>
-    <div class="lc" style="background:#EECDC7;border:1.5px solid #e6bcb4"><img src="assets/logo-aprovado.png" alt="Versão suave" style="width:100%;max-width:220px;object-fit:contain;opacity:.8"><div class="lc-lbl" style="color:#6b4a45">Versão suave</div></div>
-  </div>
-
-  <div class="lbl reveal">05 — Elementos Graficos</div>
-  <div class="tipo reveal" style="margin-bottom:52px">
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)">
-      <div class="tc-lbl">Circulos</div>
-      <p class="p" style="margin-bottom:14px">Formas que representam ligação e continuidade.</p>
-      <div class="tc-lbl">COMPOSICAO · IDENTIDADE · RITMO</div>
+  <section class="closing">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--blush)">Conceito II · Selecionado</p>
+      <h2 style="margin-bottom:16px">Proximidade Premium</h2>
+      <div class="chips">
+        <span class="chip">Lora + Inter</span>
+        <span class="chip">Paleta terracota quente</span>
+        <span class="chip">Circulos e pills</span>
+        <span class="chip">Simbolos de Fafe</span>
+        <span class="chip">Fotografia real</span>
+      </div>
     </div>
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)">
-      <div class="tc-lbl">Pills</div>
-      <p class="p" style="margin-bottom:14px">Formas arredondadas que trazem suavidade e proximidade visual.</p>
-      <div class="tc-lbl">CTA · LABELS · AREAS</div>
-    </div>
-    <div class="tc" style="background:#9A3122">
-      <div class="tc-lbl tc-lbl-lt">Simbolo CC</div>
-      <p class="p" style="color:rgba(253,250,247,.8);margin-bottom:14px">Uso do símbolo em negativo e aplicações isoladas.</p>
-      <div class="tc-lbl tc-lbl-lt">IDENTIDADE · SELLO · MARCA</div>
-    </div>
-  </div>
-
-  <div class="lbl reveal">Simbolos Locais — Fafe</div>
-  <div class="tipo reveal" style="margin-bottom:52px">
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)">
-      <div class="tc-lbl">Arco da Ponte do Barroco</div>
-      <p class="p" style="margin-bottom:8px">Construída na Alta Idade Média sobre o rio Vizela. Um arco de granito que inspira estruturas gráficas da identidade.</p>
-      <div class="tc-lbl">LIGACAO · PERMANENCIA · CONFIANCA</div>
-    </div>
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)">
-      <div class="tc-lbl">Rio Vizela</div>
-      <p class="p" style="margin-bottom:8px">A linha orgânica do rio inspira curvas e movimento no sistema gráfico.</p>
-      <div class="tc-lbl">MOVIMENTO · CONTINUIDADE · ORIGEM</div>
-    </div>
-  </div>
-
-  <div class="lbl reveal">07 — Texturas e Fundos</div>
-  <div class="tipo reveal">
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)"><div class="tc-lbl">Fundo liso quente</div><p class="p" style="margin-bottom:10px">Blush e Papel como fundos principais.</p><div class="tc-lbl">POSTS · CARTAS · FUNDOS</div></div>
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)"><div class="tc-lbl">Circulo de fundo</div><p class="p" style="margin-bottom:10px">Grande círculo terracota em baixa opacidade.</p><div class="tc-lbl">CAPAS · SLIDES · POSTS</div></div>
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)"><div class="tc-lbl">Sobreposicao coral</div><p class="p" style="margin-bottom:10px">Camada coral ou cobre sobre fundo escuro cria profundidade.</p><div class="tc-lbl">CARTAO · CAPA DE DOCUMENTO</div></div>
-    <div class="tc" style="background:linear-gradient(135deg,#6B1F14,#9A3122)"><div class="tc-lbl tc-lbl-lt">Gradiente terracota</div><p class="p" style="color:rgba(253,250,247,.82);margin-bottom:10px">Gradiente entre Brasa e Pantone 484 C usado em fundos de apresentação.</p><div class="tc-lbl tc-lbl-lt">HEADERS · BANNERS · CAPAS</div></div>
-  </div>
-</div>
-
-<div class="sd pb" id="c3"><div class="sd-n">03</div><div class="sd-left"><div class="sd-lbl">08–09 — Aplicação</div><div class="sd-ttl">Direção fotográfica e <em>exemplos de uso.</em></div></div><div class="sd-bar"></div></div>
-
-<div class="wrap">
-  <div class="lbl reveal">08 — Direcao Fotografica</div>
-  <div class="tipo reveal" style="margin-bottom:52px">
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)"><div class="tc-lbl">Tom quente</div><p class="p" style="margin-bottom:10px">Evitar imagens frias.</p><div class="tc-lbl">TRATAMENTO · COR · LUZ</div></div>
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)"><div class="tc-lbl">Pessoas reais</div><p class="p" style="margin-bottom:10px">Fotografia natural em contexto real.</p><div class="tc-lbl">EQUIPE · CLIENTES · MOMENTOS</div></div>
-    <div class="tc" style="background:#FAF8F4;border:1px solid var(--linen)"><div class="tc-lbl">Grain leve</div><p class="p" style="margin-bottom:10px">Leve textura analógica nas imagens.</p><div class="tc-lbl">PROXIMIDADE · MATERIALIDADE</div></div>
-    <div class="tc" style="background:var(--paper);border:1px solid var(--linen)"><div class="tc-lbl">Mascara circular</div><p class="p" style="margin-bottom:10px">Retratos enquadrados em círculo para consistência visual.</p><div class="tc-lbl">AVATAR · PERFIL · EQUIPE</div></div>
-  </div>
-</div>
-
-<div class="elem-bg" style="background:var(--cream)">
-  <div class="elem-inner">
-    <div class="lbl reveal">09 — Exemplos de Uso</div>
-    <h2 class="h2 reveal">Galeria organizada em <em>grid.</em></h2>
-    <div class="elem-grid reveal">
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/cartao.jpg" alt="Cartão" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">cartao.jpg</div></div>
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/caneca.jpg" alt="Caneca" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">caneca.jpg</div></div>
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/caneta.jpg" alt="Caneta" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">caneta.jpg</div></div>
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/papel1.jpg" alt="Papel 1" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">papel1.jpg</div></div>
-    </div>
-    <div class="elem-grid reveal" style="margin-top:16px">
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/papel2.jpg" alt="Papel 2" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">papel2.jpg</div></div>
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/post1.jpg" alt="Post 1" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">post1.jpg</div></div>
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/post2.jpg" alt="Post 2" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">post2.jpg</div></div>
-      <div class="eg" style="background:#FAF8F4;border:1.5px solid var(--linen);border-radius:16px;align-items:flex-start;text-align:left"><img src="assets/post3.jpg" alt="Post 3" style="width:100%;height:auto;object-fit:cover;margin-bottom:14px"><div style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink)">post3.jpg</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="sd" id="comp"><div class="sd-n">✓</div><div class="sd-left"><div class="sd-lbl">Conceito II · Selecionado</div><div class="sd-ttl">Proximidade Premium. <em>Mini brandbook digital.</em></div></div><div class="sd-bar"></div></div>
-
-<div class="wrap">
-  <div class="kw reveal">
-    <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Lora + Inter</div><div class="kw-d">Sistema tipográfico editorial</div></div>
-    <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Paleta terracota quente</div><div class="kw-d">Brasa, Pantone 484 C, Coral, Cobre, Blush</div></div>
-    <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Círculos e pills</div><div class="kw-d">Linguagem visual principal</div></div>
-    <div class="kw-r"><div class="kw-dot"></div><div class="kw-w">Símbolos de Fafe</div><div class="kw-d">Ponte do Barroco e Rio Vizela</div></div>
-    <div class="kw-r" style="border:none"><div class="kw-dot"></div><div class="kw-w">Fotografia real</div><div class="kw-d">EQUIPE · CLIENTES · MOMENTOS</div></div>
-  </div>
-</div>
-
-<footer>
-  <div class="foot-inner">
-    <div class="foot-copy">© 2026 — Conceito II · Proximidade Premium · Clementino Cunha Advogados</div>
-    <img src="assets/Símbolo-1-branco.png" alt="CC" style="height:26px;object-fit:contain;opacity:.35">
-  </div>
-</footer>
-
-<script>
-const obs = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.06,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-const secs=['capa','indice','c1','c2','c3','comp'];
-const dots=document.querySelectorAll('#snav a');
-dots.forEach((d,i)=>d.addEventListener('click',()=>document.getElementById(secs[i])?.scrollIntoView({behavior:'smooth'})));
-window.addEventListener('scroll',()=>{let cur=0;secs.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<window.innerHeight*.5)cur=i});dots.forEach((d,i)=>d.classList.toggle('on',i===cur))});
-</script>
+  </section>
 </body>
 </html>
